@@ -10,10 +10,38 @@
     --primary-color: red;
 
 }
-.container-img {
-
-    display: flex;
-
-    
-
+body{
+    height: 100vh;
 }
+    .container-img {
+        margin-top: 2vw;
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        height: 40vh;
+    }
+    .card-carousel-secundary{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .card-main-image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2vw;
+
+
+    }
+    .card-main-image img,.card-carousel-secundary img{
+        border-radius: 10px;
+
+
+    }
+    .card-main-image img{
+        width: 100%;
+    }
+    section{
+        display: flex;
+        
+    }
