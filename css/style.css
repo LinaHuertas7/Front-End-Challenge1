@@ -1,22 +1,38 @@
+*::before,
+*::after{
+
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+}
+
 body{
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
          display: flex;
-         justify-content: space-between;
          height: 70px;
          background-color: rgb(255, 255, 255);
          align-items: center;
          padding-left:180px ;
          padding-right:180px ;
+         justify-content: space-around;
+
          
 }
 
 
+
 .navigation{
-         display: flex;
-         align-items: center;
+        
+        width: 70vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: auto;
+
+        
          
 }
 
@@ -24,35 +40,73 @@ header{
          display: flex;
          align-items: center;
          font-size: 30px;
-}
-.logo a{
-         text-decoration: none;
-         color: rgb(0, 0, 0);
-         font-weight: 600;
-         padding: 13px;
-}
-
-.left{
-display: flex;
-
-}
-
-.left a{
+        padding-top: 3px;      
          
+}
+.left{
+        display: flex;
+}
+
+
+.left a {
+         position: relative;
          text-decoration: none;
-         color: rgb(0, 0, 0);
-         font-weight: 600;
-         padding: 5px;
+         color: rgb(135, 133, 133);
+         font-weight: 400;
+         letter-spacing: 0.5px;
+         padding: 0 10px;
+
+         
 }   
+.left ::after {
+        content: "";
+        position: relative;
+        background-color: rgb(2, 2, 2);
+        border-radius: 30px;
+        height: 3px;
+        left: 0;
+        width: 100%;
+        bottom: -30px;
+}
 
+.left a::after{
+         content: "";
+         position: absolute;
+         background-color: rgb(255, 115, 0);
+         border-radius: 30px;
+         height: 3px;
+         left: 0;
+         width: 0;
+         bottom: -30px;
+         transition: 0.3s;
+}
+ .left a:hover{
+        color: rgb(0, 0, 0);
+ }
+.left a:hover:after{
+         width: 90%;
+         left: 5%;
+}
 
+a:hover{
+         color: rgb(255, 106, 0);
+
+}
+
+.right{
+         display: flex;
+}
 
 .right a{
-         
+         display: flex;
          font-weight: 600;
          padding: 20px;
          text-decoration: none;
-         color: black; 
+         color: rgb(151, 148, 148); 
+}
+
+.right a:hover{
+         color: black;
 }
 .right img{
          height: 24px;
@@ -61,9 +115,11 @@ display: flex;
 
 
 
-.left a:hover{
-         color: rgb(255, 106, 0);
 
+
+
+@media (max-width:700px){
+         .left {
+                  flex-direction: column;
+         }
 }
-
-
