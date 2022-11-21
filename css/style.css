@@ -1,51 +1,94 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-section{
-    align-items: center;
-    display: flex;
-}
-
-.container-img {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5vw;
-    margin-top: 5vw;
-}
-
-.card-carousel-secundary {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-carousel-secundary img{   
-    cursor: pointer;
-    width: calc(100% - 78%);
-}
-
-.card-carousel-secundary img:hover{
-    opacity: 0.2;
-
-}
-.card-main-image, .card-carousel-secundary {
-    height: calc(100% - 21%);
-    margin-bottom: 2vw;
-    width: calc(100% - 33%);
-}
-
-.card-main-image img,
-.card-carousel-secundary img {
-    border-radius: 10px;
-}
-
-.card-main-image img {
-    height: 100%;
-    width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 section {
-    display: flex;
+  align-items: center;
+  display: flex;
+}
+
+.container-img,
+.modal-container-img {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  margin-top: 5vw;
+}
+
+.card-carousel-secundary,
+.modal-card-carousel-secundary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-carousel-secundary img,
+.modal-card-carousel-secundary img {
+  cursor: pointer;
+  width: calc(100% - 78%);
+}
+
+.card-carousel-secundary img:hover,
+.modal-card-carousel-secundary img:hover {
+  opacity: 0.2;
+}
+.card-main-image,
+.card-carousel-secundary,
+.modal-card-main-image,
+.modal-card-carousel-secundary {
+  height: calc(100% - 21%);
+  margin-bottom: 2vw;
+  width: calc(100% - 33%);
+}
+
+.card-main-image img,
+.card-carousel-secundary img,
+.modal-card-main-image img,
+.modal-card-carousel-secundary img {
+  border-radius: 10px;
+}
+
+.card-main-image img,
+.modal-card-main-image img {
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  display: flex;
+}
+
+/* ------------Modificaciones Modal container image----------- */
+
+/* --------------------Modal---------------------------- */
+.modal {
+  background-color: rgba(0, 0, 0, 0.274);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 45%;
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+
+.modal-btn-closed {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
