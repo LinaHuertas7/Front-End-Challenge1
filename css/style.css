@@ -3,12 +3,33 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+}
 
+body{
+    height: 100vh;
+}
 section {
     align-items: center;
     display: flex;
+    height: 100%;
+    justify-content: center;
 }
-
+.container-img {
+    margin-left: calc(100% - 93%);
+    width: calc(100% - 76%);
+}
+.information{
+    margin-left: calc(100% - 93%);
+}
 .container-img,
 .modal-container-img {
     display: flex;
@@ -28,21 +49,22 @@ section {
 }
 
 .card-carousel-secundary img:hover {
+    border: 2px solid var(--Orange);
     opacity: 0.2;
 }
+
 .modal-card-carousel-secundary img:hover {
-    filter: brightness(1.1);
+    border: 2px solid var(--Orange);
+    filter: opacity(40%) drop-shadow(0 0 0 var(--White));
 }
+
 .card-main-image,
 .modal-card-main-image {
     margin-bottom: 2vw;
 }
 
-.card-main-image,
-.card-carousel-secundary {
-    height: calc(100% - 21%);
-
-    width: calc(100% - 33%);
+.card-main-image {
+    cursor: pointer;
 }
 
 .modal-card-main-image,
@@ -63,43 +85,41 @@ section {
     width: 100%;
 }
 
-section {
-    display: flex;
-}
 
 /* ------------Modificaciones Modal container image----------- */
 .modal-container-img {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 /* --------------------Modal---------------------------- */
 .modal {
-    background-color: rgba(0, 0, 0, 0.274);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: rgb(0 0 0 / 70%);;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    width: 100vw;
 }
 
 .modal-content {
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
     max-width: 30%;
     position: relative;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
 }
 
 .modal-btn-closed {
-    position: absolute;
-    top: -43px;
-    right: -22px;
     background: none;
     border: none;
-    font-size: 39px;
+    color: var(--White);
     cursor: pointer;
+    font-size: 29px;
+    position: absolute;
+    right: 6px;
+    top: -40px;
 }
