@@ -9,7 +9,7 @@ modal_btn_open.addEventListener("click", () => {
         `
         <div class="modal" id="modal">
         <div class="modal-content">
-            <button class="modal-btn-closed" id = "modal-btn-closed">x</button>
+        <span class="material-symbols-outlined" id="material-symbols-outlined">close</span>
             <!--------Container image-------->
             <div class="modal-container-img">
                 <div class="modal-card-main-image">
@@ -29,12 +29,13 @@ modal_btn_open.addEventListener("click", () => {
     document.getElementById("modal").addEventListener("click", (e) => {
         //Print where push click
         console.log(e.target.id);
-        if (e.target.id === "modal" || e.target.id === "modal-btn-closed") {
+        if (
+            e.target.id === "modal" ||
+            e.target.id === "material-symbols-outlined"
+        ) {
             //Draw any in the modal_container - Return de main page
             modal_container.innerHTML = "";
         }
-
-        document.getElementById();
     });
 
     //Close the modal page with ESC - Escape key
